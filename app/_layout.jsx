@@ -7,10 +7,15 @@ import {
   TouchableOpacity,
   FlatList,
 } from 'react-native';
+import { BannerAd, BannerAdSize} from 'react-native-google-mobile-ads';
+
+
+import 'expo-dev-client';
 
 export default function App() {
   const [task, setTask] = useState('');
   const [tasks, setTasks] = useState([]);
+  
 
   const addTask = () => {
     if (task.trim()) {
@@ -26,7 +31,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* Header */}
-      <Text style={styles.header}>To-Do List</Text>
+      <Text style={styles.header}>To-Do List nh</Text>
 
       {/* Task Input */}
       <View style={styles.inputContainer}>
@@ -51,6 +56,10 @@ export default function App() {
             <TouchableOpacity onPress={() => deleteTask(item.id)}>
               <Text style={styles.deleteButton}>X</Text>
             </TouchableOpacity>
+            <BannerAd 
+            unitId='ca-app-pub-5165659855866666/9602097859'
+            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER} />
+  
           </View>
         )}
       />

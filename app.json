@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.abiarun2884.RuBi"
     },
     "web": {
       "bundler": "metro",
@@ -32,10 +33,25 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],[
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-5165659855866666~2965732850"
+       
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7a03aee2-1459-4039-ab67-c4fe5aef42c6"
+      }
+    },
+    "owner": "abiarun2884"
   }
 }
